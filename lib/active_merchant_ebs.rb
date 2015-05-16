@@ -15,7 +15,7 @@ module ActiveMerchant #:nodoc:
                 mattr_accessor :service_url
                 mattr_accessor :secret_key
 
-                self.service_url = 'https://secure.ebs.in/pg/ma/sale/pay/'
+                self.service_url = 'https://secure.ebs.in/pg/ma/payment/request'
 
                 def self.setup
                     yield(self)

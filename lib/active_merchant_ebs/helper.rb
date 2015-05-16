@@ -29,6 +29,8 @@ module ActiveMerchant #:nodoc:
                         add_field 'reference_no', mapping[:order_id]
                         add_field 'description', mapping[:order_desc]
                         add_field 'account_id', ActiveMerchant::Billing::Integrations::Ebs.account_id
+                        add_field 'page_id', ActiveMerchant::Billing::Integrations::Ebs.page_id
+                        add_field 'channel', ActiveMerchant::Billing::Integrations::Ebs.channel
                         add_field 'mode', ActiveMerchant::Billing::Integrations::Ebs.mode
                         add_field 'Checksum', get_checksum(
                                                     ActiveMerchant::Billing::Integrations::Ebs.account_id,
