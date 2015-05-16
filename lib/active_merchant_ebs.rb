@@ -11,6 +11,8 @@ module ActiveMerchant #:nodoc:
                 autoload :Notification, File.dirname(__FILE__) + '/active_merchant_ebs/notification.rb'
 
                 mattr_accessor :account_id
+                mattr_accessor :channel
+                mattr_accessor :page_id
                 mattr_accessor :mode
                 mattr_accessor :service_url
                 mattr_accessor :secret_key
