@@ -43,9 +43,9 @@ module ActiveMerchant #:nodoc:
                     end
                     
                     private
-                      def lookup_country_code(name_or_code, format = :alpha3)
-                          country = Country.find(name_or_code)
-                          country.code(format).to_s
+		      def lookup_country_code(name_or_code, format = :alpha3)
+                          country = Country.find_country_by_alpha2(name_or_code)
+                          country.alpha2.to_s
                       rescue InvalidCountryCodeError
                           name_or_code
                       end
